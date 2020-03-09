@@ -8,8 +8,6 @@ import ru.eyelog.dagger2patternkt.blacksmith.MainCounter
 
 class ActivityComponent: AppCompatActivity() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_counter)

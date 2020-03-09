@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import ru.eyelog.dagger2patternkt.component.ActivityComponent
+import ru.eyelog.dagger2patternkt.module.ActivityModule
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +16,11 @@ class MainActivity : AppCompatActivity() {
 
         btComponent.setOnClickListener {
             val intent = Intent(this, ActivityComponent::class.java)
+            startActivity(intent)
+        }
+
+        btModule.setOnClickListener {
+            val intent = Intent(this, ActivityModule::class.java)
             startActivity(intent)
         }
     }
