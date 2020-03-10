@@ -1,12 +1,12 @@
 package ru.eyelog.dagger2patternkt
 
-import android.app.ActionBar
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import ru.eyelog.dagger2patternkt.component.ActivityComponent
 import ru.eyelog.dagger2patternkt.module.ActivityModule
+import ru.eyelog.dagger2patternkt.singleton.ActivitySingleton
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +21,11 @@ class MainActivity : AppCompatActivity() {
 
         btModule.setOnClickListener {
             val intent = Intent(this, ActivityModule::class.java)
+            startActivity(intent)
+        }
+
+        btSingleton.setOnClickListener {
+            val intent = Intent(this, ActivitySingleton::class.java)
             startActivity(intent)
         }
     }
